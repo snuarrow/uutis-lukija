@@ -11,3 +11,4 @@ before_install:
 after_success:
   - mvn assembly:assembly
   - mvn heroku:deploy
+  - mvn clean cobertura:cobertura coveralls:report
