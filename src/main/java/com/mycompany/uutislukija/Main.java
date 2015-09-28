@@ -21,10 +21,10 @@ public class Main {
                     "<html lang=\"en\">\n" +
                     "<head>\n" +
                     "  <meta charset=\"utf-8\">\n" +
-                    "  <title>Hackernews-uutiset-travisin-kautta</title>\n" +
+                    "  <title>Hackernews-uutiset</title>\n" +
                     "</head>\n" +
                     "<body>\n" +
-                    "    <h1>Hackernews-uutiset-travisin-kautta</h1>\n" +
+                    "    <h1>Hackernews-uutiset</h1>\n" +
                     "                    \n" +
                     "<a href='suosituin'>suosituin</a> <br>\n" +
                     "<a href='viimeisin'>viimeisin</a></body>\n" +

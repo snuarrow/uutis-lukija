@@ -34,6 +34,26 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+        
+        
+        <dependency>
+            <groupId>org.fluentlenium</groupId>
+            <artifactId>fluentlenium-core</artifactId>
+            <version>0.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+        <dependency>
+            <groupId>org.fluentlenium</groupId>
+            <artifactId>fluentlenium-assertj</artifactId>
+            <version>0.10.3</version>
+            <scope>test</scope>
+        </dependency>
+        
+        
+        
+        
     </dependencies>
     
     <build>
@@ -106,6 +126,9 @@
                     <aggregate>true</aggregate>
                 </configuration>
             </plugin>
+            
+            
+            
             
         </plugins>
     </build>
