@@ -4,7 +4,7 @@ jdk:
 
 env:
   global:
-    - HEROKU_API_KEY = 8b0ee20e-135d-4b6f-87ae-17ed6dcc80f0
+    - HEROKU_API_KEY=8b0ee20e-135d-4b6f-87ae-17ed6dcc80f0
 
 before_install:
   - ./before_install.sh
