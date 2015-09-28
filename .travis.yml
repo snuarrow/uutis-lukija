@@ -5,3 +5,4 @@ before_install:
   - ./before_install.sh
 after_success:
   mvn assembly:assembly
+  mvn heroku:deploy
