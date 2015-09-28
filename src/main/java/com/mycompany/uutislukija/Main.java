@@ -21,7 +21,7 @@ public class Main {
                     "<html lang=\"en\">\n" +
                     "<head>\n" +
                     "  <meta charset=\"utf-8\">\n" +
-                    "  <title>Hackernews-uutiset</title>\n" +
+                    "  <title>Hackernews-uutiset-travisin-kautta</title>\n" +
                     "</head>\n" +
                     "<body>\n" +
                     "    <h1>Hackernews-uutiset</h1>\n" +
