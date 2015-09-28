@@ -24,7 +24,7 @@ public class Main {
                     "  <title>Hackernews-uutiset-travisin-kautta</title>\n" +
                     "</head>\n" +
                     "<body>\n" +
-                    "    <h1>Hackernews-uutiset</h1>\n" +
+                    "    <h1>Hackernews-uutiset-travisin-kautta</h1>\n" +
                     "                    \n" +
                     "<a href='suosituin'>suosituin</a> <br>\n" +
                     "<a href='viimeisin'>viimeisin</a></body>\n" +
