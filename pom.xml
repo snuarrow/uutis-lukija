@@ -28,7 +28,12 @@
             <artifactId>spark-core</artifactId>
             <version>2.3</version>
         </dependency>
-        
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     
     <build>
@@ -78,6 +83,27 @@
                         <!-- You might have to remove the ./ in front   -->
                         <web>java -jar ./target/uutislukija-1.0-SNAPSHOT-jar-with-dependencies.jar </web>
                     </processTypes>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>4.0.0</version>
+                <configuration>
+                    <repoToken>7NwLNTKLDVFnVguvFXMU2r9dfvK0Hrgxs</repoToken>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <format>xml</format>
+                    <maxmem>256m</maxmem>
+                    <!-- aggregated reports for multi-module projects -->
+                    <aggregate>true</aggregate>
                 </configuration>
             </plugin>
             
