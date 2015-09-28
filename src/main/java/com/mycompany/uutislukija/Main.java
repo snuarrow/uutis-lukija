@@ -10,24 +10,25 @@ public class Main {
     public static void main(String[] args){
         
         
-        port(5678);
+        port(getHerokuAssignedPort());
         
         HackerPaivanUutiset hakija = new HackerPaivanUutiset();
         
         
-        get("/", (req, res) -> {
-           return "<!doctype html>\n" +
-"<html lang=\"en\">\n" +
-"<head>\n" +
-"  <meta charset=\"utf-8\">\n" +
-"  <title>Hackernews-uutiset</title>\n" +
-"</head>\n" +
-"<body>\n" +
-"    <h1>Hackernews-uutiset</h1>\n" +
-"                    \n" +
-"<a href='suosituin'>suosituin</a> <br>\n" +
-"<a href='viimeisin'>viimeisin</a></body>\n" +
-"</html>"; 
+        get("/", (req, res) -> 
+        {
+           return   "<!doctype html>\n" +
+                    "<html lang=\"en\">\n" +
+                    "<head>\n" +
+                    "  <meta charset=\"utf-8\">\n" +
+                    "  <title>Hackernews-uutiset</title>\n" +
+                    "</head>\n" +
+                    "<body>\n" +
+                    "    <h1>Hackernews-uutiset</h1>\n" +
+                    "                    \n" +
+                    "<a href='suosituin'>suosituin</a> <br>\n" +
+                    "<a href='viimeisin'>viimeisin</a></body>\n" +
+                    "</html>"; 
         });
         get("/viimeisin", (req, res) -> hakija.haeViimeisinUutinen());
         get("/suosituin", (req, res) -> hakija.haeSuosituinUutinen());
@@ -41,6 +42,14 @@ public class Main {
 //        } else if(args[0].equals("suosituin")){
 //            System.out.println(hakija.haeSuosituinUutinen());
 //        }
+    }
+    
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
     
     public static String komennot(){
